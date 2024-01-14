@@ -1,0 +1,68 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Wehr4WHUaM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BBH Property Management</span>\",\"col\":12}},{\"id\":\"zZ0QpLXcm3\",\"type\":\"card\",\"data\":{\"card_name\":\"BBH Master Settings\",\"col\":4}}]",
+ "creation": "2024-01-10 13:00:24.166881",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "BBH Property Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BBH Master Settings",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Building",
+   "link_count": 0,
+   "link_to": "Building",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Floor",
+   "link_count": 0,
+   "link_to": "Floor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-01-14 20:20:17.567123",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "BBH Property Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "BBH Property Management"
+}
