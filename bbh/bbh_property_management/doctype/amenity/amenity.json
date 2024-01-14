@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:title",
+ "creation": "2024-01-09 13:23:46.817093",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "section_break_lm7oj",
+  "type_of_amenity",
+  "column_break_tnsor",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_lm7oj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_amenity",
+   "fieldtype": "Link",
+   "label": "Type Of Amenity",
+   "options": "Type Of Amenity"
+  },
+  {
+   "fieldname": "column_break_tnsor",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-09 13:25:52.342018",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "Amenity",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
