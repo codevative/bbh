@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{project}-{building_name}",
+ "creation": "2024-01-10 12:58:57.821865",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "project_details_section",
+  "project",
+  "building_details_section",
+  "building_name",
+  "has_floors",
+  "no_of_floors",
+  "column_break_6a4x4",
+  "covered_area",
+  "add_units",
+  "units",
+  "amenities",
+  "section_break_ntijb",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project_details_section",
+   "fieldtype": "Section Break",
+   "label": "Project Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building_details_section",
+   "fieldtype": "Section Break",
+   "label": "Building Details"
+  },
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Building Name",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "has_floors",
+   "fieldtype": "Check",
+   "label": "Has Floors"
+  },
+  {
+   "depends_on": "eval:doc.has_floors == 1",
+   "fieldname": "no_of_floors",
+   "fieldtype": "Int",
+   "label": "No Of Floors",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_6a4x4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "covered_area",
+   "fieldtype": "Data",
+   "label": "Covered Area"
+  },
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Table MultiSelect",
+   "label": "Amenities",
+   "options": "Amenities"
+  },
+  {
+   "fieldname": "section_break_ntijb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.has_floors == 1",
+   "fieldname": "add_units",
+   "fieldtype": "Check",
+   "label": "Add Units"
+  },
+  {
+   "depends_on": "eval:doc.add_units == 1",
+   "fieldname": "units",
+   "fieldtype": "Table",
+   "label": "Units",
+   "mandatory_depends_on": "eval:doc.add_units == 1",
+   "options": "Building Unit Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-11 12:14:18.055924",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "Building",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
