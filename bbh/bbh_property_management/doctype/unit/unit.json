@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-11 10:49:07.016898",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "building_details_section",
+  "project",
+  "building",
+  "column_break_bgw1s",
+  "floor_no",
+  "unit_details_section",
+  "unit_type",
+  "unit_size_sq_m",
+  "unit_no",
+  "column_break_rhxhc",
+  "status",
+  "unit_narration",
+  "price",
+  "unit_sketch"
+ ],
+ "fields": [
+  {
+   "fetch_from": "building.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Building",
+   "options": "Building",
+   "reqd": 1
+  },
+  {
+   "fieldname": "floor_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Floor No.",
+   "options": "Floor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "label": "Unit Type",
+   "options": "Unit Type"
+  },
+  {
+   "fieldname": "unit_size_sq_m",
+   "fieldtype": "Float",
+   "label": "Unit Size (Sq m.)"
+  },
+  {
+   "fieldname": "unit_no",
+   "fieldtype": "Int",
+   "label": "Unit No."
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nRented\nSold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_narration",
+   "fieldtype": "Data",
+   "label": "Unit Narration"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "unit_sketch",
+   "fieldtype": "Attach",
+   "label": "Unit Sketch"
+  },
+  {
+   "fieldname": "building_details_section",
+   "fieldtype": "Section Break",
+   "label": "Building Details"
+  },
+  {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Details"
+  },
+  {
+   "fieldname": "column_break_rhxhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bgw1s",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-11 10:52:49.096569",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
