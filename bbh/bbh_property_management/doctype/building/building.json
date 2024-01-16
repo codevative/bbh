@@ -19,7 +19,8 @@
   "covered_area",
   "amenities",
   "section_break_ntijb",
-  "notes"
+  "notes",
+  "image"
  ],
  "fields": [
   {
@@ -88,8 +89,14 @@
    "fieldname": "notes",
    "fieldtype": "Data",
    "label": "Notes"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -103,7 +110,7 @@
    "link_fieldname": "building"
   }
  ],
- "modified": "2024-01-15 16:33:38.225737",
+ "modified": "2024-01-16 14:25:33.689135",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Building",
