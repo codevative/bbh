@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "field:unit_narration",
  "creation": "2024-01-11 10:49:07.016898",
  "default_view": "List",
  "doctype": "DocType",
@@ -75,7 +75,9 @@
   {
    "fieldname": "unit_narration",
    "fieldtype": "Data",
-   "label": "Unit Narration"
+   "label": "Unit Narration",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "price",
@@ -108,10 +110,12 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-11 10:52:49.096569",
+ "modified": "2024-01-16 10:01:09.909328",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Unit",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
