@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Wehr4WHUaM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BBH Property Management</span>\",\"col\":12}},{\"id\":\"zZ0QpLXcm3\",\"type\":\"card\",\"data\":{\"card_name\":\"BBH Master Settings\",\"col\":4}}]",
+ "content": "[{\"id\":\"Wehr4WHUaM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BBH Property Management</span>\",\"col\":12}},{\"id\":\"YiRVupgnG-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"ikMzwyDWeS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Building\",\"col\":3}},{\"id\":\"0xd72aW_wd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floor\",\"col\":3}},{\"id\":\"b_xxGrZtgW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit\",\"col\":3}},{\"id\":\"IovQv7ompV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Amenity\",\"col\":3}},{\"id\":\"PoFPKtQlxs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}}]",
  "creation": "2024-01-10 13:00:24.166881",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,58 +11,8 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "BBH Property Management",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "BBH Master Settings",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Project",
-   "link_count": 0,
-   "link_to": "Project",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Building",
-   "link_count": 0,
-   "link_to": "Building",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Floor",
-   "link_count": 0,
-   "link_to": "Floor",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Unit",
-   "link_count": 0,
-   "link_to": "Unit",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2024-01-15 15:50:05.327476",
+ "links": [],
+ "modified": "2024-01-16 09:33:02.600835",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "BBH Property Management",
@@ -73,6 +23,55 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 2.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Amenity",
+   "link_to": "Amenity",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Project",
+   "link_to": "Project",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Building",
+   "link_to": "Building",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Floor",
+   "link_to": "Floor",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Unit Type",
+   "link_to": "Unit Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Unit",
+   "link_to": "Unit",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "BBH Property Management"
 }
