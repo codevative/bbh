@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "format:{building}-{floor_number}",
  "creation": "2024-01-10 12:59:04.640651",
  "default_view": "List",
@@ -97,11 +96,18 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-11 12:06:37.093724",
+ "links": [
+  {
+   "group": "BBH Management",
+   "link_doctype": "Unit",
+   "link_fieldname": "floor_no"
+  }
+ ],
+ "modified": "2024-01-16 10:04:19.668188",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Floor",
+ "name_case": "Title Case",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -118,8 +124,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "floor_number"
+ "title_field": "floor_name"
 }
