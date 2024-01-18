@@ -9,7 +9,8 @@ frappe.ui.form.on('Sales Invoice', {
             function (frm, cdt, cdn) {
                 return {
                     filters: {
-                        project: frm.project
+                        project: frm.project,
+                        has_floors: 1
                     },
                 };
             }
@@ -24,6 +25,7 @@ frappe.ui.form.on('Sales Invoice', {
                     filters: {
                         project: frm.project,
                         building: d.custom_building,
+                        has_units: 1
                     }
                 };
             }
@@ -40,6 +42,7 @@ frappe.ui.form.on('Sales Invoice', {
                         building: d.custom_building,
                         floor_no: d.custom_floor,
                         linked_item: ['!=', ''],
+                        status: 'Available'
                     }
                 };
             }
