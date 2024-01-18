@@ -25,3 +25,28 @@ def create_units_for_floor(floor, data):
         unit.insert()
     floor_doc.has_units = 1
     floor_doc.save()
+
+
+
+@frappe.whitelist()
+def create_floors_for_buildings(building, data):
+    building_doc = frappe.get_doc('Building', building)
+    data = json.loads(data)
+    units = data.get("no_of_floors")
+    previous_high = 0
+    if frappe.db.exists("Floor", {"building": building_doc.name}):
+        previous_high = frappe.db.get_value("Floor", {"building": building_doc.name}, "floor_number", order_by="floor_number DESC")
+
+    for i in range(int(previous_high), int(previous_high)+int(units)):
+
+        floor = frappe.get_doc({
+            "doctype": "Floor",
+            "building": building_doc.name,
+            "project": building_doc.project,
+            "floor_number": int(i+1),
+            "floor_name": "Floor "+str(i+1),
+            "total_area": building_doc.covered_area
+        })
+        floor.insert()
+    building_doc.has_floors = 1
+    building_doc.save()
