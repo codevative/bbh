@@ -9,7 +9,7 @@ frappe.ui.form.on('Sales Invoice', {
             function (frm, cdt, cdn) {
                 return {
                     filters: {
-                        project: frm.custom_project
+                        project: frm.project
                     },
                 };
             }
@@ -22,7 +22,7 @@ frappe.ui.form.on('Sales Invoice', {
                 let d = locals[cdt][cdn];
                 return {
                     filters: {
-                        project: frm.custom_project,
+                        project: frm.project,
                         building: d.custom_building,
                     }
                 };
@@ -36,7 +36,7 @@ frappe.ui.form.on('Sales Invoice', {
                 let d = locals[cdt][cdn];
                 return {
                     filters: {
-                        project: frm.custom_project,
+                        project: frm.project,
                         building: d.custom_building,
                         floor_no: d.custom_floor,
                         linked_item: ['!=', ''],
@@ -46,7 +46,7 @@ frappe.ui.form.on('Sales Invoice', {
         );
     },
 
-    custom_project: function (frm) {
+    project: function (frm) {
         frm.set_query(
             "custom_building",
             "items",
