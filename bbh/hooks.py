@@ -124,6 +124,13 @@ doctype_calendar_js = {"Sales Invoice" : "public/js/custom_sales_invoice.js"}
 # 	}
 # }
 
+doc_events = {
+	"Sales Invoice": {
+		"on_cancel": "bbh.utils.update_unit",
+		"on_submit": "bbh.utils.update_unit"
+	}
+}
+
 # Scheduled Tasks
 # ---------------
 

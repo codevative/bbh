@@ -50,3 +50,14 @@ def create_floors_for_buildings(building, data):
         floor.insert()
     building_doc.has_floors = 1
     building_doc.save()
+
+
+@frappe.whitelist()
+def update_unit(doc,event):
+    if event == "on_cancel":
+        status = "Available"
+    elif event == "on_submit":
+        status = "Sold"
+    for row in doc.items:
+        if row.custom_unit:
+            frappe.db.set_value('Unit', row.custom_unit, 'status', status)
