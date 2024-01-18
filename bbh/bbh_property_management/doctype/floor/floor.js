@@ -18,7 +18,6 @@ frappe.ui.form.on('Floor', {
 				primary_action_label: __('Create'),
 				primary_action(values) {
 					frappe.call({
-						method: 'yourapp.yourmodule.create_units_for_floor',
 						method: 'bbh.utils.create_units_for_floor',
 						args: { floor: frm.doc.name, data: values },
 						callback: function (r) {
