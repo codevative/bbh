@@ -13,7 +13,6 @@
   "building_details_section",
   "building_name",
   "has_floors",
-  "no_of_floors",
   "notes",
   "column_break_6a4x4",
   "building_code",
@@ -61,14 +60,8 @@
    "default": "0",
    "fieldname": "has_floors",
    "fieldtype": "Check",
-   "label": "Has Floors"
-  },
-  {
-   "depends_on": "eval:doc.has_floors == 1",
-   "fieldname": "no_of_floors",
-   "fieldtype": "Int",
-   "label": "No Of Floors",
-   "non_negative": 1
+   "label": "Has Floors",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_6a4x4",
@@ -143,7 +136,7 @@
    "link_fieldname": "building"
   }
  ],
- "modified": "2024-01-18 16:45:16.908381",
+ "modified": "2024-01-18 17:05:56.550824",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Building",
