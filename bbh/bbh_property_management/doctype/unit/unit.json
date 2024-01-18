@@ -8,38 +8,43 @@
  "engine": "InnoDB",
  "field_order": [
   "building_details_section",
+  "floor_no",
+  "column_break_bgw1s",
   "project",
   "building",
-  "column_break_bgw1s",
-  "floor_no",
   "unit_details_section",
   "unit_type",
   "unit_size_sq_m",
   "unit_no",
   "linked_item",
+  "unit_sketch",
   "column_break_rhxhc",
   "status",
   "unit_narration",
   "price",
-  "unit_sketch",
-  "image"
+  "image",
+  "other_attachment"
  ],
  "fields": [
   {
    "fetch_from": "building.project",
    "fieldname": "project",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "floor_no.building",
    "fieldname": "building",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Building",
    "options": "Building",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -70,8 +75,10 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Available\nRented\nSold",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -120,12 +127,17 @@
    "label": "Linked Item",
    "options": "Item",
    "read_only": 1
+  },
+  {
+   "fieldname": "other_attachment",
+   "fieldtype": "Attach",
+   "label": "Other Attachment"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-16 14:24:43.798438",
+ "modified": "2024-01-18 14:13:40.547052",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Unit",
@@ -146,7 +158,10 @@
    "write": 1
   }
  ],
+ "search_fields": "unit_narration, building,project,floor_no,status",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "unit_narration"
 }
