@@ -23,3 +23,5 @@ def create_units_for_floor(floor, data):
             "unit_narration": str(floor_doc.name) + str(i+1)
         })
         unit.insert()
+    floor_doc.has_units = 1
+    floor_doc.save()
