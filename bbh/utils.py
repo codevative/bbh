@@ -115,7 +115,7 @@ def create_terms(invoice,data):
     payment_terms = []
 
     try:
-        for d in invoice_doc.custom_payment_schedule:
+        for d in data:
             try:
                 credit_days = date_diff(d.payment_date, invoice_doc.posting_date)
                 invoice_portion = (d.payment_amount / total_invoice_amount) * 100 if total_invoice_amount else 0
@@ -124,6 +124,8 @@ def create_terms(invoice,data):
                 payment_term = frappe.get_doc({
                     'doctype': 'Payment Term',
                     'payment_term_name': payment_term_name,
+                    'mode_of_payment': d.mode_of_payment,
+                    'custom_payment_reference_':d.payment_no,
                     'invoice_portion': invoice_portion,
                     'description': f"Payment No {d.idx}",
                     'credit_days': credit_days if credit_days > 0 else 0,
@@ -148,8 +150,6 @@ def create_terms(invoice,data):
             raise
         try:
             return payment_terms_template.name
-            # invoice_doc.payment_terms_template = "Payment Terms for Invoice #ACC-SINV-2024-00019"
-            # frappe.log_error(title="Sales Invoice Updated", message=f"Linked payment terms template {payment_terms_template_name} to Invoice {invoice_doc.name}.")
         except Exception as e:
             frappe.log_error(title="Sales Invoice Update Failed", message=f"Failed to link payment terms template to Invoice {invoice_doc.name}: {e}")
             raise
