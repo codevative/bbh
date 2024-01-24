@@ -115,6 +115,13 @@ frappe.ui.form.on('Sales Invoice', {
                 dialog.show();
             });
         }
+        setTimeout(() => {
+            frm.remove_custom_button('Sales Order','Get Items From');
+            frm.remove_custom_button('Delivery Note','Get Items From');
+            frm.remove_custom_button('Quotation','Get Items From');
+            frm.remove_custom_button('Fetch Timesheet');
+        }, 75);
+
     },
 
     project: function (frm) {
