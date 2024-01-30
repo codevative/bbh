@@ -1,6 +1,14 @@
 frappe.ui.form.on('Subscription Plan', {
     refresh(frm) {
 
+        // Make fields read-only if the document is submitted
+        if (frm.doc.docstatus === 0 && !frm.is_new()) {
+            frm.set_df_property('project', 'read_only', 1);
+            frm.set_df_property('building', 'read_only', 1);
+            frm.set_df_property('floor', 'read_only', 1);
+            frm.set_df_property('custom_unit', 'read_only', 1);
+        }
+
         frm.set_query("building", function () {
             let project = "";
             if (frm.doc.project) {
