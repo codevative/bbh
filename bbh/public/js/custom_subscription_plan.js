@@ -38,6 +38,7 @@ frappe.ui.form.on('Subscription Plan', {
                     floor_no: floor_no,
                     building: frm.doc.building,
                     project: frm.doc.project,
+                    status: "Available",
                 },
             };
         });
