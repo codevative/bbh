@@ -73,6 +73,7 @@ class CustomSubscription(Subscription):
 			invoice.append("items", item)
 		if doctype == "Sales Invoice" and project:		
 			invoice.project = project
+			invoice.is_rented = 1
 
 		# Taxes
 		tax_template = ""
