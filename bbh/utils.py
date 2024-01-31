@@ -51,15 +51,16 @@ def create_floors_for_buildings(building, data):
 
 @frappe.whitelist()
 def update_unit(doc,event):
-    if event == "on_cancel":
-        status = "Available"
-    elif event == "on_submit":
-        status = "Sold"
-        if doc.custom_down_payment and doc.custom_down_payment > 0:
-            make_payment_entry(doc)
-    for row in doc.items:
-        if row.custom_unit:
-            frappe.db.set_value('Unit', row.custom_unit, 'status', status)
+    if not doc.is_rented:
+        if event == "on_cancel":
+            status = "Available"
+        elif event == "on_submit":
+            status = "Sold"
+            if doc.custom_down_payment and doc.custom_down_payment > 0:
+                make_payment_entry(doc)
+        for row in doc.items:
+            if row.custom_unit:
+                frappe.db.set_value('Unit', row.custom_unit, 'status', status)
 
 def make_payment_entry(doc):
     company = doc.company
