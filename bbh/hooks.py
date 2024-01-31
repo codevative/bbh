@@ -114,6 +114,9 @@ doctype_js = {
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
+override_doctype_class = {
+	"Subscription": "bbh.bbh_property_management.overrides.custom_subscription.CustomSubscription"
+}
 
 # Document Events
 # ---------------
