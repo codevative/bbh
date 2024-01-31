@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Wehr4WHUaM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BBH Property Management</span>\",\"col\":12}},{\"id\":\"PQmdRxZSsS\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"BBH Property Management\",\"col\":12}},{\"id\":\"YiRVupgnG-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"ikMzwyDWeS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Building\",\"col\":3}},{\"id\":\"0xd72aW_wd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floor\",\"col\":3}},{\"id\":\"b_xxGrZtgW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit\",\"col\":3}},{\"id\":\"gf_6sh4SkK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"IovQv7ompV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Amenity\",\"col\":3}},{\"id\":\"PoFPKtQlxs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}},{\"id\":\"B-a_KaTKzt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"7cmmwDU44z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Items\",\"col\":3}},{\"id\":\"HkKdOBKPHm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreements\",\"col\":3}}]",
+ "content": "[{\"id\":\"Wehr4WHUaM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\">BBH Property Management</span>\",\"col\":12}},{\"id\":\"PQmdRxZSsS\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"BBH Property Management\",\"col\":12}},{\"id\":\"YiRVupgnG-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"ikMzwyDWeS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Building\",\"col\":3}},{\"id\":\"0xd72aW_wd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floor\",\"col\":3}},{\"id\":\"b_xxGrZtgW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit\",\"col\":3}},{\"id\":\"gf_6sh4SkK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"IovQv7ompV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Amenity\",\"col\":3}},{\"id\":\"PoFPKtQlxs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}},{\"id\":\"B-a_KaTKzt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"7cmmwDU44z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Items\",\"col\":3}},{\"id\":\"HkKdOBKPHm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreements\",\"col\":3}}]",
  "creation": "2024-01-10 13:00:24.166881",
  "custom_blocks": [
   {
@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "BBH Property Management",
  "links": [],
- "modified": "2024-01-30 18:29:37.496878",
+ "modified": "2024-01-31 12:29:41.879002",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "BBH Property Management",
