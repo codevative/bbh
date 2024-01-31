@@ -15,6 +15,15 @@ from frappe.utils.data import (
 )
 
 class CustomSubscription(Subscription):
+	def validate(self):
+		super().validate()
+		units = self.get_items_from_plans(self.plans)
+		if self.status not in ["Completed", "Cancelled"]:
+			for unit in units:
+				frappe.db.set_value("Unit", unit["item_code"], "status", "Rented")
+		else:
+			for unit in units:
+				frappe.db.set_value("Unit", unit["item_code"], "status", "Available")
 
 	def create_invoice(self, prorate):
 		"""
