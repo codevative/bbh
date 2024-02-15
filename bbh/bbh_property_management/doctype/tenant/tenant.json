@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "field:customer",
  "creation": "2024-02-05 14:35:16.849640",
  "default_view": "List",
  "doctype": "DocType",
@@ -62,10 +63,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-05 14:35:16.849640",
+ "modified": "2024-02-05 16:21:40.662604",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Tenant",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

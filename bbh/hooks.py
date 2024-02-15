@@ -185,6 +185,7 @@ doc_events = {
 # -----------------------------------------------------------
 
 # ignore_links_on_delete = ["Communication", "ToDo"]
+ignore_links_on_delete = ["Customer", "Tenant","Landlord"]
 
 # Request Events
 # ----------------
