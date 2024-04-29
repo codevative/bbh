@@ -10,6 +10,7 @@
   "details_tab",
   "project_and_building_details_section",
   "building",
+  "landlord",
   "column_break_lh8be",
   "project",
   "floor_details_section",
@@ -115,6 +116,12 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "Has Units"
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "LandLord Master"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -125,11 +132,10 @@
    "link_fieldname": "floor_no"
   }
  ],
- "modified": "2024-01-18 14:14:29.669248",
+ "modified": "2024-04-17 15:55:11.635684",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Floor",
- "name_case": "Title Case",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

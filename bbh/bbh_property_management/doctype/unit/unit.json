@@ -12,6 +12,7 @@
   "column_break_bgw1s",
   "project",
   "building",
+  "landlord",
   "unit_details_section",
   "unit_type",
   "unit_size_sq_m",
@@ -134,16 +135,21 @@
    "fieldname": "other_attachment",
    "fieldtype": "Attach",
    "label": "Other Attachment"
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "LandLord Master"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 11:56:47.019590",
+ "modified": "2024-04-17 15:55:25.762801",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Unit",
- "name_case": "Title Case",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

@@ -25,13 +25,17 @@ app_license = "MIT"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+page_js = {"dashboard": "public/js/dashboard.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 doctype_js = {
     "Sales Invoice" : "public/js/custom_sales_invoice.js",
-    "Subscription Plan" : "public/js/custom_subscription_plan.js"
+    "Subscription Plan" : "public/js/custom_subscription_plan.js",
+    #  "Sales Invoice": "public/js/sales_invoice.js",
+    "Payment Entry": "public/js/payment_entry.js"
     }
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -135,8 +139,20 @@ doc_events = {
 		"on_cancel": "bbh.utils.update_unit",
 		"on_submit": "bbh.utils.update_unit"
 	}
+    ,
+    # "Rental": {
+    #     "on_submit": "bbh.bbh_property_management.doctype.rental.rental.create_sales_invoice_on_rent_submission"
+    # }
 }
 
+
+scheduler_events = {
+    "daily": [
+        "bbh.events.create_invoice.execute",
+        "bbh.events.cancel_rental_contract.execute",
+        "bbh.events.update_status.execute"
+    ]
+}
 # Scheduled Tasks
 # ---------------
 
@@ -226,3 +242,9 @@ doc_events = {
 # auth_hooks = [
 # 	"bbh.auth.validate"
 # ]
+jenv = {
+    "methods": [
+        "get_landlord_details:bbh.api.tenant_renting.get_landlord_details",
+        "get_tenant_details:bbh.api.tenant_renting.get_tenant_details"
+    ]
+}

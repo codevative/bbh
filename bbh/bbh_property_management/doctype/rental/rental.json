@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-06 09:11:19.048173",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "project",
+  "building",
+  "landlord",
+  "apply_invoices_now",
+  "column_break_vhua",
+  "tenant",
+  "status",
+  "floor",
+  "unit",
+  "section_break_rulv",
+  "posting_date",
+  "contract_start_date",
+  "contract_end_date",
+  "start_invoice_date",
+  "column_break_2h7c",
+  "cancellation_date",
+  "reason_for_cancellation",
+  "advance_paid_amount",
+  "deposit_amount",
+  "section_break_v03z",
+  "rental_frequency",
+  "rental_amount",
+  "section_break_cens",
+  "section_break_20",
+  "items",
+  "terms_and_conditions_template",
+  "terms_and_conditions",
+  "section_break_3ige",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3ige",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Floor",
+   "options": "Floor"
+  },
+  {
+   "fieldname": "column_break_vhua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nActive\nExpired\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rulv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contract Start Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cancellation_date",
+   "fieldtype": "Date",
+   "label": "Cancellation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason_for_cancellation",
+   "fieldtype": "Data",
+   "label": "Reason for Cancellation"
+  },
+  {
+   "fieldname": "advance_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Paid Amount"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "section_break_v03z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rental_frequency",
+   "fieldtype": "Select",
+   "label": "Rental Frequency",
+   "options": "Monthly\nQuarterly\nHalf-yearly\nYearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rental Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cens",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_conditions_template",
+   "fieldtype": "Link",
+   "label": "Terms and Conditions Template",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "column_break_2h7c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit",
+   "options": "Unit"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "options": "Rental items"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Invoice Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_invoices_now",
+   "fieldtype": "Check",
+   "label": "Apply Invoices Now"
+  },
+  {
+   "fieldname": "start_invoice_date",
+   "fieldtype": "Date",
+   "label": "Start Invoice Date"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "LandLord Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "name"
+  }
+ ],
+ "modified": "2024-04-17 15:47:39.351902",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "Rental",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

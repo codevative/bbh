@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-18 11:11:08.806314",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_datetime",
+  "status",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Activity DateTime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-21 10:15:49.667829",
+ "modified_by": "Administrator",
+ "module": "BBH Property Management",
+ "name": "Unit Maintenance Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
