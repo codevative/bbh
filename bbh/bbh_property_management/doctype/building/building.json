@@ -10,6 +10,7 @@
   "details_tab",
   "project_details_section",
   "project",
+  "landlord",
   "building_details_section",
   "building_name",
   "has_floors",
@@ -120,6 +121,12 @@
   {
    "fieldname": "column_break_fgdpb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "LandLord Master"
   }
  ],
  "image_field": "image",
@@ -136,11 +143,10 @@
    "link_fieldname": "building"
   }
  ],
- "modified": "2024-01-18 17:05:56.550824",
+ "modified": "2024-04-17 15:53:32.628621",
  "modified_by": "Administrator",
  "module": "BBH Property Management",
  "name": "Building",
- "name_case": "Title Case",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

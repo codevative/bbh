@@ -51,10 +51,22 @@ def create_floors_for_buildings(building, data):
 
 @frappe.whitelist()
 def update_unit(doc,event):
+    # rental_contracts = frappe.get_all("Rental",
+    #     filters={"docstatus": 1},
+    #     fields=["name", "contract_start_date", "contract_end_date", "unit"])
+    # for contract in rental_contracts:
+    #     units = frappe.get_doc("Unit", fields=["name","status"])
+
+    #     if contract.contract_start_date > contract.contract_end_date:
+    #         status = "Rented"
+    #     elif contract.contract_end_date < nowdate():
+    #         status = "Available"
     if not doc.is_rented:
         if event == "on_cancel":
             status = "Available"
-        elif event == "on_submit":
+        if event == "on_submit" and doc.custom_pm_rental != "":
+            status = "Rented"
+        elif event == "on_submit" and doc.custom_pm_rental == "":
             status = "Sold"
             if doc.custom_down_payment and doc.custom_down_payment > 0:
                 make_payment_entry(doc)

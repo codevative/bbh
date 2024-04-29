@@ -47,6 +47,20 @@ frappe.ui.form.on('Sales Invoice', {
                 };
             }
         );
+    
+            frm.set_query(
+                "custom_floor",
+                function (doc) {
+                    return {
+                        filters: {
+                            project: doc.project,
+                            building: frm.custom_building,
+                            has_units: 1
+                        }
+                    };
+                }
+            );
+        
         if (!frm.is_new() && frm.doc.docstatus == 0) {
             frm.add_custom_button(__('Create Payment Schedule'), function () {
 
@@ -137,4 +151,48 @@ frappe.ui.form.on('Sales Invoice', {
             }
         );
     },
-});
+    project: function (frm) {
+        frm.set_query(
+            "custom_building",
+            function (doc) {
+                return {
+                    filters: {
+                        project: frm.project,
+                        has_floors: 1
+                    }
+                };
+            }
+        );
+    },
+
+    custom_building: function (frm) {
+        frm.set_query(
+            "custom_floor",
+            function (doc) {
+                return {
+                    filters: {
+                        project: doc.project,
+                        custom_building: frm.custom_building,
+                        has_units: 1
+                    }
+                };
+            }
+        );
+    },
+    custom_floor: function (frm) {
+        frm.set_query(
+            "custom_unit",
+            function (doc) {
+                return {
+                    filters: {
+                        project: doc.project,
+                        custom_building: frm.building,
+                        custom_floor: frm.floor,
+                        linked_item: ['!=', ''],
+                        status: 'Available',
+                    }
+                };
+            }
+        );
+    },
+})  
